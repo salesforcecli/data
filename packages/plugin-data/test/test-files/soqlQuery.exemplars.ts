@@ -2242,4 +2242,39 @@ export const soqlQueryExemplars = {
       },
     },
   },
+  queryWithIdFilters: {
+    query: "SELECT Id, name FROM Contact where Id = '003B000000DkDswIAF'",
+    queryResult: {
+      totalSize: 1,
+      done: true,
+      records: [
+        {
+          attributes: {
+            type: 'Contact',
+            url: '/services/data/v51.0/sobjects/Contact/003B000000DkDswIAF',
+          },
+          Id: '003B000000DkDswIAF',
+          Name: 'Matteo Crippa',
+        },
+      ],
+    },
+    soqlQueryResult: {
+      columns: queryFieldsExemplars.queryWithIdFilters.columns,
+      query: "SELECT Id, Name FROM Contact where Id = '003B000000DkDswIAF'",
+      result: {
+        totalSize: 1,
+        done: true,
+        records: [
+          {
+            attributes: {
+              type: 'Contact',
+              url: '/services/data/v51.0/sobjects/Contact/003B000000DkDswIAF',
+            },
+            Id: '003B000000DkDswIAF',
+            Name: 'Matteo Crippa',
+          },
+        ],
+      },
+    },
+  },
 };

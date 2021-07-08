@@ -116,8 +116,8 @@ export class ExportApi {
       }
     }
 
-    config.query = config.query.toLowerCase().trim();
-    if (!config.query.startsWith('select')) {
+    config.query = config.query.trim();
+    if (!/^select/i.test(config.query)) {
       throw SfdxError.create('@salesforce/plugin-data', 'exportApi', 'soqlInvalid', [config.query]);
     }
 
